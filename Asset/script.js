@@ -48,7 +48,7 @@ function storeTodos() {
 }
 
 // When form is submitted...
-todoForm.addEventListener("submit", function(event) {
+todoForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   var todoText = todoInput.value.trim();
@@ -68,7 +68,7 @@ todoForm.addEventListener("submit", function(event) {
 });
 
 // When a element inside of the todoList is clicked...
-todoList.addEventListener("click", function(event) {
+todoList.addEventListener("click", function (event) {
   var element = event.target;
 
   // If that element is a button...
@@ -82,3 +82,18 @@ todoList.addEventListener("click", function(event) {
     renderTodos();
   }
 });
+
+
+var queryURL = "https://quote-garden.herokuapp.com/api/v2/quotes?";  
+// quotegarden API
+
+// var queryURL = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand"; Quotes on Design API
+
+$.ajax({
+      url: queryURL,
+      method: "GET",
+    }).then(function (response) {
+      console.log(response);
+    });
+
+console.log("working");
