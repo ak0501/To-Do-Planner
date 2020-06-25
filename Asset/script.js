@@ -99,6 +99,24 @@ todoList.addEventListener("click", function (event) {
   }
 });
 
+function getQuote() {
+  // quotegarden API
+  var queryURL = "https://quote-garden.herokuapp.com/api/v2/quotes?";
+
+  // quotes by design API
+  // var queryURL = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand";
+
+  // ajax call to Quote Garden
+  $.ajax({
+    url: queryURL,
+    method: "GET",
+  }).then(function (response) {
+    console.log(response);
+  });
+
+  console.log("working");
+}
+
 
 // ----------------------- Countdown Timer Variables ----------------------- //
 
@@ -132,4 +150,3 @@ console.log("working");
 
 
 // ----------------------- Images API Functions ----------------------- //
-
