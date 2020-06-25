@@ -125,11 +125,21 @@ $.ajax({
       console.log(response);
     });
 
-console.log("working");
-
 // ----------------------- Images API Variables ----------------------- //
+var pixelKey = "17203059-4d033efc49ecc457a7083a895";
 
+var imgUrl = "https://pixabay.com/api/?key=" + pixelKey + "&category=feelings&image_type=photo";
 
+// Accepted category values: backgrounds, fashion, nature, science, education, feelings, health, people, religion, places, animals, industry, computer, food, sports, transportation, travel, buildings, business, music
 
 // ----------------------- Images API Functions ----------------------- //
-
+function getImages() {
+  
+  $.ajax({
+    url: imgUrl,
+    method: "GET",
+  }).then(function (imageData) {
+    console.log(imageData);
+    console.log("working");
+  });
+}
