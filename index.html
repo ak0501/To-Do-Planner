@@ -9,7 +9,14 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <!-- Imported Font -->
+   
+  <!-- Jquery script  -->
+    <script type="text/JavaScript" src="http://code.jquery.com/jquery-1.11.2.js"></script>
+  
+  <!-- BootStrap script -->
+   <script type="text/JavaScript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
+  
+   <!-- Imported Font -->
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="Asset/style.css" />
@@ -39,6 +46,41 @@
 
   <!-- Display Motivational Quote -->
   <div><span id ="quote"></span></div>
+  
+  <!---Modal------------------------------------------------------------------------------------------------------------------------------- -->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCentered">
+    Get Motivated
+  </button>
+  <div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenteredLabel">Inspiration</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Insert a bootsrtap card -->
+          <div class="card">
+            <img class="card-img" src="https://www.spiritualhighs.com/wp-content/uploads/Spiritual-Quote-3-1.jpg"
+              alt="showQuotes">
+            <div class="card-img-overlay text-white d-flex justify-content-center align-items-end">
+              <!-- this is where the quote contents go -->
+              <p id="quotePlace"></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Timer</button> -->
+          <button type="button" class="btn btn-primary" id="timeStart">start Time</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-----------------------------modal ------------------------------------------------------------------------------------------------------------------------------>
   
 <!-- ----------------------- Todo Entry Textbox ----------------------- -->
   <div class="todos">
