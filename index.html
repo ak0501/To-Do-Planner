@@ -30,9 +30,17 @@
 
 <body>
   <!-- ----------------------- Header/Navbar/Instructions ----------------------- -->
+ <!-- buttons  -->
+ <button type="button" class="motivationButton">Motivation</button>
+ <button type="button" class="timmerButton">Timer</button>
+ 
+  <!-- display Timmer -->
+  <div><span id="time"></span></div>
 
-
-  <!-- ----------------------- Todo Entry Textbox ----------------------- -->
+  <!-- Display Motivational Quote -->
+  <div><span id ="quote"></span></div>
+  
+<!-- ----------------------- Todo Entry Textbox ----------------------- -->
   <div class="todos">
     <form id="todo-form" method="POST">
       <label for="todo-text">Add a Todo:</label>
@@ -46,6 +54,7 @@
     <ul id="todo-list"></ul>
   </div>
 
+  
   <!-- ----------------------- Scripts ----------------------- -->
 
   <!-- jQuery script -->
