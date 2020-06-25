@@ -99,49 +99,72 @@ todoList.addEventListener("click", function (event) {
   }
 });
 
-function getQuote() {
-  // quotegarden API
-  var queryURL = "https://quote-garden.herokuapp.com/api/v2/quotes?";
+// button trial begining
 
-  // quotes by design API
-  // var queryURL = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand";
+// button trial end
 
-  // ajax call to Quote Garden
-  $.ajax({
-    url: queryURL,
-    method: "GET",
-  }).then(function (response) {
-    console.log(response);
-  });
 
-  console.log("working");
+
+
+// ----------------------- Countdown Timer Start ----------------------- //
+
+
+
+function startTimer(duration, display) {
+  var timer = duration, minutes, seconds;
+  setInterval(function () {
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds;
+
+      if (--timer < 0) {
+          timer = duration;
+      }
+  }, 1000);
 }
 
+$(".timmerButton").on("click", function timmerClick() {
+  var fiveMinutes = 60 * 5,
+      display = document.querySelector('#time');
+  startTimer(fiveMinutes, display);
+});
 
-// ----------------------- Countdown Timer Variables ----------------------- //
 
 
-
-// ----------------------- Countdown Timer Functions ----------------------- //
+// ----------------------- Countdown Timer Finsh ----------------------- //
 
 
 
 // ----------------------- Quote API Variables ----------------------- //
 
 // quotegarden API
-var queryURL = "https://quote-garden.herokuapp.com/api/v2/quotes?";  
+var queryURL = "https://quote-garden.herokuapp.com/api/v2/quotes/random?";  
 // Quotes on Design API
 // var queryURL = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand"; 
 
 // ----------------------- Quote API Functions ----------------------- //
 
 // Quote Garden API call
+var quoteText = $("#quote")
+//  $(document).ready(function(){
+  $(".motivationButton").click(function(){
 $.ajax({
       url: queryURL,
       method: "GET",
     }).then(function (response) {
-      console.log(response);
+      console.log(response.quote.quoteText);
+      quoteText.empty();
+      quoteText.append(response.quote.quoteText);
+      
+      
+      
+
     });
+  });
 
 // ----------------------- Images API Variables ----------------------- //
 var pixelKey = "17203059-4d033efc49ecc457a7083a895";
