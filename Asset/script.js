@@ -1,15 +1,28 @@
-var todoInput = document.querySelector("#todo-text");
-var todoForm = document.querySelector("#todo-form");
-var todoList = document.querySelector("#todo-list");
-var todoCountSpan = document.querySelector("#todo-count");
+// ----------------------- Script Overview ----------------------- //
 
+// Use Cases
+
+
+
+// ----------------------- Todo list Variables ----------------------- //
+
+var todoInput = document.querySelector("#todo-text");
+
+var todoForm = document.querySelector("#todo-form");
+
+var todoList = document.querySelector("#todo-list");
+
+var todoCountSpan = document.querySelector("#todo-count");
+// create a todos array to hold todos text
 var todos = [];
 
+// ----------------------- Todo list Functions ----------------------- //
 init();
 
 function renderTodos() {
   // Clear todoList element and update todoCountSpan
   todoList.innerHTML = "";
+  
   todoCountSpan.textContent = todos.length;
 
   // Render a new li for each todo
@@ -50,7 +63,7 @@ function storeTodos() {
 // When form is submitted...
 todoForm.addEventListener("submit", function (event) {
   event.preventDefault();
-
+  // clear the whitespace from text entered by the user
   var todoText = todoInput.value.trim();
 
   // Return from function early if submitted todoText is blank
@@ -60,10 +73,12 @@ todoForm.addEventListener("submit", function (event) {
 
   // Add new todoText to todos array, clear the input
   todos.push(todoText);
+  // clear the text from todos textbox
   todoInput.value = "";
 
   // Store updated todos in localStorage, re-render the list
   storeTodos();
+  // display the todo to the user
   renderTodos();
 });
 
@@ -79,16 +94,30 @@ todoList.addEventListener("click", function (event) {
 
     // Store updated todos in localStorage, re-render the list
     storeTodos();
+    // display the todo to the user
     renderTodos();
   }
 });
 
 
-var queryURL = "https://quote-garden.herokuapp.com/api/v2/quotes?";  
+// ----------------------- Countdown Timer Variables ----------------------- //
+
+
+
+// ----------------------- Countdown Timer Functions ----------------------- //
+
+
+
+// ----------------------- Quote API Variables ----------------------- //
+
 // quotegarden API
+var queryURL = "https://quote-garden.herokuapp.com/api/v2/quotes?";  
+// Quotes on Design API
+// var queryURL = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand"; 
 
-// var queryURL = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand"; Quotes on Design API
+// ----------------------- Quote API Functions ----------------------- //
 
+// Quote Garden API call
 $.ajax({
       url: queryURL,
       method: "GET",
@@ -97,3 +126,10 @@ $.ajax({
     });
 
 console.log("working");
+
+// ----------------------- Images API Variables ----------------------- //
+
+
+
+// ----------------------- Images API Functions ----------------------- //
+

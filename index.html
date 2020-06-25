@@ -9,33 +9,53 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <!-- Imported Font -->
+  
   <!-- Custom CSS -->
   <link rel="stylesheet" href="Asset/style.css" />
 </head>
 
+<!-- ----------------------- UI & UX Ideas and Request ----------------------- -->
+
+<!-- Ideas -->
+
+<!-- Add Jumbotron design to Todo Entry Textbox -->
+
+<!-- Request -->
+
+<!-- Research color palettes -->
+<!-- Sketch out mobile first MVP design -->
+<!-- Create section for motivation/timer buttons -->
+<!-- Move Todo Counter -->
+
 <body>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- ----------------------- Header/Navbar/Instructions ----------------------- -->
 
-  </script>
-  <!-- // <script
-    //   src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    //   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    //   crossorigin="anonymous"
-    // ></script> -->
 
+  <!-- ----------------------- Todo Entry Textbox ----------------------- -->
   <div class="todos">
     <form id="todo-form" method="POST">
       <label for="todo-text">Add a Todo:</label>
+      <!-- Todo textbox with placeholder -->
       <input type="text" placeholder="What needs to be done?" name="todo-text" id="todo-text" />
     </form>
+    <!-- ----------------------- Entered Todo List ----------------------- -->
+    <!-- Counter for total todos -->
     <p>Todo Count: <span id="todo-count">0</span></p>
+    <!-- Todos render here -->
     <ul id="todo-list"></ul>
   </div>
+
+  <!-- ----------------------- Scripts ----------------------- -->
+
+  <!-- jQuery script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Popper.js for positioning -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
+
+  <!-- Custom JavaScript -->
   <script src="Asset/script.js"></script>
 </body>
 
