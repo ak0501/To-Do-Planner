@@ -1,15 +1,28 @@
-var todoInput = document.querySelector("#todo-text");
-var todoForm = document.querySelector("#todo-form");
-var todoList = document.querySelector("#todo-list");
-var todoCountSpan = document.querySelector("#todo-count");
+// ----------------------- Script Overview ----------------------- //
 
+// Use Cases
+
+
+
+// ----------------------- Todo list Variables ----------------------- //
+
+var todoInput = document.querySelector("#todo-text");
+
+var todoForm = document.querySelector("#todo-form");
+
+var todoList = document.querySelector("#todo-list");
+
+var todoCountSpan = document.querySelector("#todo-count");
+// create a todos array to hold todos text
 var todos = [];
 
+// ----------------------- Todo list Functions ----------------------- //
 init();
 
 function renderTodos() {
   // Clear todoList element and update todoCountSpan
   todoList.innerHTML = "";
+  
   todoCountSpan.textContent = todos.length;
 
   // Render a new li for each todo
@@ -50,7 +63,7 @@ function storeTodos() {
 // When form is submitted...
 todoForm.addEventListener("submit", function (event) {
   event.preventDefault();
-
+  // clear the whitespace from text entered by the user
   var todoText = todoInput.value.trim();
 
   // Return from function early if submitted todoText is blank
@@ -60,10 +73,12 @@ todoForm.addEventListener("submit", function (event) {
 
   // Add new todoText to todos array, clear the input
   todos.push(todoText);
+  // clear the text from todos textbox
   todoInput.value = "";
 
   // Store updated todos in localStorage, re-render the list
   storeTodos();
+  // display the todo to the user
   renderTodos();
 });
 
@@ -79,6 +94,7 @@ todoList.addEventListener("click", function (event) {
 
     // Store updated todos in localStorage, re-render the list
     storeTodos();
+    // display the todo to the user
     renderTodos();
   }
 });
@@ -101,48 +117,36 @@ function getQuote() {
   console.log("working");
 }
 
-function gmailAPI() {
-  // Client ID and API key from the Developer Console
-  var CLIENT_ID =
-    "573547482730-8q3jkvtaaahi07k8lpefoe7lqs38v03p.apps.googleusercontent.com";
-  console.log("Client ID: " + CLIENT_ID);
-  var API_KEY = "AIzaSyBiXWLVyyEEcRTVkh7Hq-kf4eS8TAII3nA";
-  console.log("API Key: " + API_KEY);
-  // Array of API discovery doc URLs for APIs used by the quickstart
-  var DISCOVERY_DOCS = [
-    "https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest",
-  ];
 
-  // Authorization scopes required by the API; multiple scopes can be
-  // included, separated by spaces.
-  //   make sure the scope is able to write
+// ----------------------- Countdown Timer Variables ----------------------- //
 
-  var SCOPES = "https://www.googleapis.com/auth/gmail.readonly";
 
-  // Initialize the JavaScript client library.
-  gapi.client
-    .init({
-      apiKey: API_KEY,
-      // clientId and scope are optional if auth is not required.
-      clientId: CLIENT_ID,
-      scope: "profile",
-    })
-    .then(function () {
-      //  Initialize and make the API request.
-      // Update with gmail information
-      return gapi.client.request({
-        path:
-          "https://people.googleapis.com/v1/people/me?requestMask.includeField=person.names",
-      });
-    })
-    .then(
-      function (response) {
-        console.log(response.result);
-      },
-      function (reason) {
-        console.log("Error: " + reason.result.error.message);
-      }
-    );
-}
-// 1. Load the JavaScript client library.
-gapi.load("client", gmailAPI);
+
+// ----------------------- Countdown Timer Functions ----------------------- //
+
+
+
+// ----------------------- Quote API Variables ----------------------- //
+
+// quotegarden API
+var queryURL = "https://quote-garden.herokuapp.com/api/v2/quotes?";  
+// Quotes on Design API
+// var queryURL = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand"; 
+
+// ----------------------- Quote API Functions ----------------------- //
+
+// Quote Garden API call
+$.ajax({
+      url: queryURL,
+      method: "GET",
+    }).then(function (response) {
+      console.log(response);
+    });
+
+console.log("working");
+
+// ----------------------- Images API Variables ----------------------- //
+
+
+
+// ----------------------- Images API Functions ----------------------- //
