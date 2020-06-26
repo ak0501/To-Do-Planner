@@ -38,6 +38,12 @@ function renderTodos() {
 
     li.appendChild(button);
     todoList.appendChild(li);
+    
+    // extra button
+
+    
+    
+
   }
 }
 
@@ -127,7 +133,7 @@ function startTimer(duration, display) {
   }, 1000);
 }
 
-$(".timmerButton").on("click", function timmerClick() {
+$("#timmerButton").on("click", function timmerClick() {
   var fiveMinutes = 60 * 5,
       display = document.querySelector('#time');
   startTimer(fiveMinutes, display);
@@ -151,7 +157,7 @@ var queryURL = "https://quote-garden.herokuapp.com/api/v2/quotes/random?";
 // Quote Garden API call
 var quoteText = $("#quote")
 //  $(document).ready(function(){
-  $(".motivationButton").click(function(){
+  $("#motivationButton").click(function(){
 $.ajax({
       url: queryURL,
       method: "GET",

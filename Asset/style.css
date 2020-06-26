@@ -5,9 +5,10 @@
 }
 
 body {
-  font-family: "Concert One", cursive;
+  font-family: 'Quattrocento', serif;
   font-size: 16px;
   text-align: center;
+  background-color: #8EC4F6;
 
 }
 
@@ -36,7 +37,7 @@ li {
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 5px;
-  background-color: #ff5d88;
+  background-color: #1173D0;
   color: white;
   font-size: 1.5em;
   line-height: 1.5;
@@ -58,17 +59,26 @@ li button {
   border: none;
   height: 40px;
   cursor: pointer;
-  background-color: #ff9500;
+  background-color: midnightblue;
   color: white;
   font-size: 1em;
+  
+  
 }
 
 li button:hover {
-  background-color: #febc5d;
+  background-color: green;
+  
+  
+  
 }
+
+
+
 
 .todos {
   width: 800px;
   margin: 0 auto;
   margin-top: 40px;
+  
 }
