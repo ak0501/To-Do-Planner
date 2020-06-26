@@ -41,8 +41,6 @@ function renderTodos() {
     
     // extra button
 
-    
-    
 
   }
 }
