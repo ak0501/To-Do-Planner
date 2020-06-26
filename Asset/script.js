@@ -159,14 +159,12 @@ $.ajax({
       console.log(response.quote.quoteText);
       quoteText.empty();
       quoteText.append(response.quote.quoteText);
-      
-      
-      
-
     });
   });
 
 // ----------------------- Images API Variables ----------------------- //
+var randomImageNumber = Math.floor(Math.random() * 20);
+var imageToDisplay = $("#motivationImage")
 var pixelKey = "17203059-4d033efc49ecc457a7083a895";
 
 var imgUrl = "https://pixabay.com/api/?key=" + pixelKey + "&category=feelings&image_type=photo";
@@ -181,8 +179,9 @@ function getImages() {
     url: imgUrl,
     method: "GET",
   }).then(function (imageData) {
-    console.log(imageData);
-    console.log("working");
+    console.log("working!");
+    imageToDisplay.attr("src", imageData.hits[randomImageNumber].webformatURL);
   });
 }
 
+getImages();
