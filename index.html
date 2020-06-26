@@ -17,6 +17,7 @@
   <script type="text/JavaScript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
 
   <!-- Imported Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&display=swap" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="Asset/style.css" />
@@ -37,46 +38,61 @@
 
 <body>
   <!-- ----------------------- Header/Navbar/Instructions ----------------------- -->
-  <!-- buttons  -->
-  <button type="button" class="motivationButton">Motivation</button>
-  <button type="button" class="timmerButton">Timer</button>
-
-  <!-- display Timmer -->
-  <div><span id="time"></span></div>
-
-  <!-- Display Motivational Quote -->
-  <div><span id="quote"></span></div>
+  
 
   <!---Modal------------------------------------------------------------------------------------------------------------------------------- -->
 
   <!-----------------------------modal ------------------------------------------------------------------------------------------------------------------------------>
   <!-- Jumbotron -->
   <div class="jumbotron p-0">
+    <div class ="container d-smflex">
+
 
     <!-- Card image -->
-    <div class="view overlay rounded-top">
+    <div class="view overlay rounded-top"><br>
       <img src="https://via.placeholder.com/350X150
 
 C/O https://placeholder.com/" class="img-fluid" alt="Sample image">
       <a href="#">
         <div class="mask rgba-white-slight"></div>
       </a>
+      
     </div>
 
     <!-- Card content -->
     <div class="card-body text-center mb-3">
 
       <!-- Title -->
-      <h3 class="card-title h3 my-4"><strong>Doer</strong></h3>
+      <h3 class="card-title h3 my-4"><strong>To Do List</strong></h3>
       <!-- Text -->
-      <p class="card-text py-2">Add your task to the list
-      </p>
+      
+      <h4>To add items to the list begin by tying them in the text box
+        <br>Then when you are done hit the complete button</h4>
+
       <!-- Button -->
       <!-- <a href="#" class="btn purple-gradient btn-rounded mb-4">Button</a> -->
-      <!-- Button trigger modal -->
+     
+      <!-- buttons  -->
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCentered">
-        Click here to Get extra Motivated
-      </button>
+        Click here to Get extra Motivated</button>
+          <button type="button" class="btn btn-primary" id="motivationButton">Motivation</button>
+          <button type="button" class="btn btn-primary" id="timmerButton">Timer</button><br><br>
+      
+          
+      <!-- Display Motivational Quote -->
+      <div class="card">
+        <div class="card-body"><span id="quote"></span>
+          </div>
+          </div><br>
+
+          <!-- display Timmer -->
+          <div class="card">
+        <div class="card-body"><span id="time"></span>
+          </div>
+          </div>
+          
+
+    <!---- modal ---->
       <div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -110,18 +126,22 @@ C/O https://placeholder.com/" class="img-fluid" alt="Sample image">
 
   </div>
   <!-- ----------------------- Todo Entry Textbox ----------------------- -->
+  <div class ="container d-flex">
   <div class="todos">
     <form id="todo-form" method="POST">
-      <label for="todo-text">Add a Todo:</label>
+      <label for="todo-text"></label>
       <!-- Todo textbox with placeholder -->
       <input type="text" placeholder="What needs to be done?" name="todo-text" id="todo-text" />
-    </form>
+    </form><br>
     <!-- ----------------------- Entered Todo List ----------------------- -->
     <!-- Counter for total todos -->
-    <p>Todo Count: <span id="todo-count">0</span></p>
+    <h5>Todo Count: <span id="todo-count">0</span></h5>
     <!-- Todos render here -->
     <ul id="todo-list"></ul>
+    <br>
   </div>
+</div>
+</div>
 
 
   <!-- ----------------------- Scripts ----------------------- -->
@@ -140,5 +160,6 @@ C/O https://placeholder.com/" class="img-fluid" alt="Sample image">
   <script src="Asset/script.js"></script>
 
 </body>
+<footer></footer>
 
 </html>
