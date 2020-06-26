@@ -39,60 +39,58 @@
 <body>
   <!-- ----------------------- Header/Navbar/Instructions ----------------------- -->
 
-  <!-- Jumbotron -->
+  <!-- ----------------------- Jumbotron -----------------------  -->
 
   <div class="jumbotron p-0">
     <!-- Card image -->
     <div class="view overlay rounded-top">
-      <img id="motivationImage" src="https://via.placeholder.com/350X150C/O https://placeholder.com/" class="img-fluid" alt="Sample image">
+      <img id="motivationImage" src="https://via.placeholder.com/350X150C/O https://placeholder.com/" class="img-fluid"
+        alt="Sample image">
       <!-- Title -->
       <h3 class="card-title h3 my-4"><strong>To Do List</strong></h3>
       <!-- Text -->
       <h4>To add items to the list begin by tying them in the text box
         <br>Then when you are done hit the complete button</h4>
-          <!-- Action Buttons  -->
-          <button type="button" class="btn btn-primary" id="motivationButton">Get Motivated</button>
-          <button type="button" class="btn btn-primary" id="timmerButton">Start Timer</button>
-          <!-- Display Motivational Quote -->
-          <div class="card">
-            <div class="card-body">
-              <span id="quote"></span>
-            </div>
-            </div>
-          </div>
-          <br>
-          <!-- Display Timer -->
-          <div class="card">
-            <div class="card-body">
-              <span id="time"></span>
-            </div>
-          </div>
-                  <!-- ----------------------- Entered Todo List ----------------------- -->
-                  <!-- Counter for total todos -->
-                  <h5>Todo Count: <span id="todo-count">0</span></h5>
-                  <!-- Todos render here -->
-                  <ul id="todo-list"></ul>
-                  <br>
-
-                  <!-- ----------------------- Todo Entry Textbox ----------------------- -->
-                  <div class="container d-flex">
-                    <div class="todos">
-                      <form id="todo-form" method="POST">
-                        <label for="todo-text">Add a Todo:</label>
-                        <!-- Todo textbox with placeholder -->
-                        <input type="text" placeholder="What needs to be done?" name="todo-text" id="todo-text" style="text-align: center;/>
-        </form>
+      <!-- Action Buttons  -->
+      <button type="button" class="btn btn-primary" id="motivationButton">Get Motivated</button>
+      <button type="button" class="btn btn-primary" id="timmerButton">Start Timer</button>
+      <!-- Display Motivational Quote -->
+      <div class="card">
+        <div class="card-body">
+          <span id="quote"></span>
         </div>
-        <!-- ----------------------- Entered Todo List ----------------------- -->
-        <!-- Counter for total todos -->
-        <p>Todo Count: <span id=" todo-count">0</span></p>
-                        <!-- Todos render here -->
-                        <ul id="todo-list"></ul>
-                    </div>
-                  </div>
+      </div>
+    </div>
+    <br>
+    <!-- Display Timer -->
+    <div class="card">
+      <div class="card-body">
+        <span id="time"></span>
+      </div>
+    </div>
+  </div>
 
-                </div>
+  <!-- ----------------------- Entered Todo List ----------------------- -->
+  <div>
+    <!-- Counter for total todos -->
+    <h5>Todo Count: <span id="todo-count">0</span></h5>
+  </div>
 
+  <!-- ----------------------- Todo Entry Textbox ----------------------- -->
+  <div class="todos">
+    <form id="todo-form" method="POST">
+      <label for="todo-text">Add a Todo:</label>
+      <!-- Todo textbox with placeholder -->
+      <input type="text" placeholder="What needs to be done?" name="todo-text" id="todo-text"
+        style="text-align: center">
+    </form>
+  </div>
+
+  <!-- ----------------------- Entered Todo List ----------------------- -->
+  <div>
+    <!-- Todos render here -->
+    <ul id="todo-list"></ul>
+  </div>
 
 </body>
 <footer>
@@ -103,8 +101,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Popper.js for positioning -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-  crossorigin="anonymous">
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
 
 <!-- Custom JavaScript -->
@@ -112,4 +109,5 @@
 <script src="https://apis.google.com/js/api.js"></script>
 
 <script src="Asset/script.js"></script>
+
 </html>
