@@ -20,79 +20,86 @@
   <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&display=swap" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="Asset/style.css" />
+  <link rel="stylesheet" href="Asset/style.css"/>
 </head>
 
 <!-- ----------------------- UI & UX Ideas and Request ----------------------- -->
 
 <!-- Ideas -->
 
-<!-- Add Jumbotron design to Todo Entry Textbox -->
-
 <!-- Request -->
 
-<!-- Research color palettes -->
-<!-- Sketch out mobile first MVP design -->
-<!-- Create section for motivation/timer buttons -->
-<!-- Move Todo Counter -->
-
-<body>
+<body class="content">
   <!-- ----------------------- Header/Navbar/Instructions ----------------------- -->
-
+  <header>
+    <br>
+  </header>
   <!-- ----------------------- Jumbotron -----------------------  -->
-
-  <div class="jumbotron p-0">
-    <!-- Card image -->
-    <div class="view overlay rounded-top">
-      <img id="motivationImage" src="https://via.placeholder.com/350X150C/O https://placeholder.com/" class="img-fluid"
-        alt="Sample image">
-      <!-- Title -->
-      <h3 class="card-title h3 my-4"><strong>To Do List</strong></h3>
-      <!-- Text -->
-      <h4>To add items to the list begin by tying them in the text box
-        <br>Then when you are done hit the complete button</h4>
+  <div class="main row">
+    <div class="jumbotron col-6">
+      <h1 class="display-4">Motivational Todo List</h1>
+      <p class="lead">To add items to the list begin by tying them in the text box</p>
+      <p class="lead">Then when you are done hit the complete button</p>
       <!-- Action Buttons  -->
-      <button type="button" class="btn btn-primary" id="motivationButton">Get Motivated</button>
-      <button type="button" class="btn btn-primary" id="timmerButton">Start Timer</button>
-      <!-- Display Motivational Quote -->
-      <div class="card">
+
+
+      <hr class="my-4">
+      <!-- Points & Todo Count -->
+      <h5>Current Points: <span id="points">0</span></h5>
+      <h5>Todo Count: <span id="todo-count">0</span></h5>
+      <hr class="my-4">
+      <!-- ----------------------- Todo Entry Textbox ----------------------- -->
+      <div class="todos">
+        <form id="todo-form" method="POST">
+          <label for="todo-text">Add a Todo:</label>
+          <!-- Todo textbox with placeholder -->
+          <input type="text" placeholder="What needs to be done?" name="todo-text" id="todo-text"
+            style="text-align: center">
+        </form>
+      </div>
+      <br>
+      <!-- Todos render here -->
+      <div>
+        <ul id="todo-list"></ul>
+      </div>
+
+    </div>
+    <div class="col-6">
+      <div>
         <div class="card-body">
-          <span id="quote"></span>
+          <img id="motivationImage" src="https://via.placeholder.com/350X150C/O https://placeholder.com/"
+            class="img-fluid" alt="Sample image">
         </div>
       </div>
-    </div>
-    <br>
-    <!-- Display Timer -->
-    <div class="card">
-      <div class="card-body">
-        <span id="time"></span>
+      <br>
+      <!-- Display Motivational Quote -->
+      <div class="row">
+        <div class="quotesCard card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Motivational Quote</h5>
+            <p id="quote" class="card-text">Click the button for some motivation!</p>
+            <button id="motivationButton" class="btn btn-primary btn-lg" href="#" role="button">Get Motivated</button>
+          </div>
+        </div>
+        <br>
+        <!-- Display Timer -->
+        <div class="timerCard card" style="width: 18rem;">
+          <!-- Countdown Timer animation could go here -->
+          <!-- <img src="..." class="card-img-top" alt="..."> -->
+          <div class="card-body">
+            <h5 class="card-title">Countdown Timer</h5>
+            <h1 id="time"></h1>
+            <p class="card-text">Any remaining time will be added to your score! Get it done!</p>
+            <button id="timmerButton" class="btn btn-primary btn-lg" href="#" role="button">Get Started</button>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </div>
-
-  <!-- ----------------------- Entered Todo List ----------------------- -->
-  <div>
-    <!-- Counter for total todos -->
-    <h5>Todo Count: <span id="todo-count">0</span></h5>
-  </div>
-
-  <!-- ----------------------- Todo Entry Textbox ----------------------- -->
-  <div class="todos">
-    <form id="todo-form" method="POST">
-      <label for="todo-text">Add a Todo:</label>
-      <!-- Todo textbox with placeholder -->
-      <input type="text" placeholder="What needs to be done?" name="todo-text" id="todo-text"
-        style="text-align: center">
-    </form>
-  </div>
-
-  <!-- ----------------------- Entered Todo List ----------------------- -->
-  <div>
-    <!-- Todos render here -->
-    <ul id="todo-list"></ul>
-  </div>
-
 </body>
+
 <footer>
 
 </footer>
