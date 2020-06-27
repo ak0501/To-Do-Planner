@@ -4,12 +4,13 @@
   box-sizing: border-box;
 }
 
-body {
+.content {
   font-family: 'Quattrocento', serif;
   font-size: 16px;
   text-align: center;
   background-color: #8EC4F6;
-
+  width: 95%;
+  margin: auto;
 }
 
 .modivationButton{
@@ -69,13 +70,10 @@ li button {
 li button:hover {
   background-color: green;
   
-  
-  
 }
 
-
 .todos {
-  width: 800px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 40px;
   
