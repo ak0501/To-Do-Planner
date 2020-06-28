@@ -114,28 +114,40 @@ todoList.addEventListener("click", function (event) {
 
 
 
-function startTimer(duration, display) {
-  var timer = duration, minutes, seconds;
-  setInterval(function () {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
+var startTimer = function(){
+  var duration = moment.duration({
+    "minutes": 5,
+    "seconds": 00
 
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
+  });
+//    moments.js 
+  var timestamp = new Date(0, 0, 0, 2, 10, 30);
+  var interval = 1;
+  var timer = setInterval(function() {
+    timestamp = new Date(timestamp.getTime() + interval * 1000);
 
-    display.textContent = minutes + ":" + seconds;
+    duration = moment.duration(duration.asSeconds() - interval, "seconds");
+    var min = duration.minutes();
+    var sec = duration.seconds();
 
-    if (--timer < 0) {
-      timer = duration;
-    }
+
+    sec -= 1;
+    if (min < 0) return clearInterval(timer);
+    if (min < 10 && min.length != 2) min = "0" + min;
+    if (sec < 0 && min != 0) {
+      min -= 1;
+      sec = 59;
+    } else if (sec < 10 && sec.length != 2) sec = "0" + sec;
+
+
+   
+    $("#newTimmer").text(min + ":" + sec);
+    if (min == 0 && sec == 0)
+      clearInterval(timer);
+
+
   }, 1000);
-}
-
-$("#timmerButton").on("click", function timmerClick() {
-  var fiveMinutes = 60 * 5,
-    display = document.querySelector('#time');
-  startTimer(fiveMinutes, display);
-});
+  }
 
 
 
