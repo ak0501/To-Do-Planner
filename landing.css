@@ -3,7 +3,7 @@ body {
 }
 
 
-.clock-quote {
+.clock-quote #instructions {
     padding: 100px;
     text-align: center;
     margin-top: 100px;
@@ -17,16 +17,24 @@ body {
 }
 
 
-.clock {
+/* .clock {
     text-align: center;
     padding: 20px;
-}
+} */
 
 #canvas {
     border-radius: 50%;
 }
 
 
+.back .front {
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
 
 
 blockquote {

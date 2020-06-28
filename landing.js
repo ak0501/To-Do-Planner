@@ -2,7 +2,7 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var radius = canvas.height / 2;
 ctx.translate(radius, radius);
-radius = radius * 0.90
+radius = radius * 0.90;
 setInterval(drawClock, 1000);
 
 function drawClock() {
@@ -84,7 +84,7 @@ $(function () {
         axis: "Y", // y or x
         reverse: false, // true and false
         trigger: "click", // click
-        speed: '250',
+        speed: '200',
         front: $('.front'),
         back: $('.back'),
         autoSize: false,
