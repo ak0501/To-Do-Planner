@@ -14,55 +14,64 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <link rel="stylesheet" href="landing.css">
 
 </head>
 
 <body>
-
-    <!------ Include the above in your HEAD tag ---------->
-
-    <div class="container clock-quote">
-        <a href="index.html">
-            <div class="info">
-                <div class="row">
-                    <div class="col-md-6">
+    <div class="container-fluid">
+        <div id="card-1">
+            <!-----------------------------------------Front Content of the card------------------------------------------------->
+            <div class="front">
+                <div class="container-fluid clock-quote">
+                    <!-- <a href="index.html"> -->
+                    <div class="info">
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="clock">
-                                    <canvas id="canvas" width="400" height="400"
-                                        style="background-color:rgb(170, 177, 243)">
-                                    </canvas>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <!-------------------------CLOCK---------------------------------------------------------->
+                                        <div class="clock">
+                                            <canvas id="canvas" width="400" height="400"
+                                                style="background-color:rgb(170, 177, 243)">
+                                            </canvas>
+                                        </div>
+                                        <!-------------------------CLOCK---------------------------------------------------------->
+                                    </div>
                                 </div>
                             </div>
+                            <!-------------------------QUOTE---------------------------------------------------------->
+                            <div class="col-md-6">
+                                <blockquote class="wp-block-quote">
+                                    <p>You don't have to see the whole staircase, just take the first step.</p>
+                                    <cite>Martin
+                                        Luther Jr.</cite>
+                                </blockquote>
+                                <p>click to go to your task</p>
+                            </div>
+                            <!-------------------------QUOTE---------------------------------------------------------->
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <blockquote class="wp-block-quote">
-                            <p>You don't have to see the whole staircase, just take the first step.</p><cite>Martin
-                                Luther Jr.</cite>
-                        </blockquote>
-                        <p>click to go to your task</p>
                     </div>
                 </div>
             </div>
-        </a>
+            <!-----------------------------------------Front Content of the card------------------------------------------------->
+            <!-----------------------------------------Back Content of the card------------------------------------------------->
+            <div class="container-fluid">
+                <div class="back" style="background-color: royalblue;">
+                    <h2>To do</h2>
+                </div>
+            </div>
+            <!-----------------------------------------Back Content of the card------------------------------------------------->
+        </div>
     </div>
 
 
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
     <script src="landing.js"></script>
+
+
+
 </body>
 
 </html>

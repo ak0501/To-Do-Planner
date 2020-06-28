@@ -77,3 +77,17 @@ function drawHand(ctx, pos, length, width) {
     ctx.stroke();
     ctx.rotate(-pos);
 }
+
+// --------------------carD flip function----------------------
+$(function () {
+    $("#card-1").flip({
+        axis: "Y", // y or x
+        reverse: false, // true and false
+        trigger: "click", // click
+        speed: '250',
+        front: $('.front'),
+        back: $('.back'),
+        autoSize: false,
+    });
+
+});
