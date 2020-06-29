@@ -13,17 +13,14 @@
   margin: auto;
 }
 
-.modivationButton{
-  color: grey;
-  text: black;
-}
+
 
 input {
   height: 50px;
   width: 100%;
   padding: 6px;
   margin-top: 10px;
-  font-size: 2.4em;
+  font-size: 32px;
   border: none;
 }
 
@@ -40,7 +37,7 @@ li {
   padding: 5px;
   background-color: #1173D0;
   color: white;
-  font-size: 1.5em;
+  font-size: 24px;
   line-height: 1.5;
 }
 
@@ -63,14 +60,21 @@ li button {
   background-color: midnightblue;
   color: white;
   font-size: 1em;
-  
-  
 }
 
 li button:hover {
   background-color: green;
   
 }
+
+.img-fluid,
+.quotesCard,
+.timerCard {
+  width: 95%;
+  margin: auto;
+}
+
+
 
 .todos {
   width: 100%;
