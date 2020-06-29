@@ -15,6 +15,8 @@
 
   <!-- BootStrap script -->
   <script type="text/JavaScript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
+  <!--  MomentJs script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.0/moment.min.js"></script>
 
   <!-- Imported Font -->
   <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&display=swap" rel="stylesheet">
@@ -89,8 +91,8 @@
           <div class="card-body">
             <h5 class="card-title">Countdown Timer</h5>
             <h1 id="time"></h1>
-            <p class="card-text">Any remaining time will be added to your score! Get it done!</p>
-            <button id="timmerButton" class="btn btn-primary btn-lg" href="#" role="button">Get Started</button>
+            <p class="card-text" id ="newTimmer">Any remaining time will be added to your score! Get it done!</p>
+            <button onclick= "startTimer()" id="timmerButton" class="btn btn-primary btn-lg" href="#" role="button">Get Started</button>
           </div>
         </div>
 
