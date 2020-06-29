@@ -17,10 +17,7 @@ body {
 }
 
 
-/* .clock {
-    text-align: center;
-    padding: 20px;
-} */
+
 
 #canvas {
     border-radius: 50%;
@@ -28,12 +25,31 @@ body {
 
 
 .back .front {
-    
+
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+
+}
+
+.enterTask {
+    padding-top: 166px;
+    text-align: center;
+
+}
+
+.wp-block-quote,
+li {
+    font-family: 'Roboto Mono',
+        monospace;
+
+
+}
+
+#howto {
+    font-family: 'Pacifico',
+        cursive;
+    color: #111d5e;
 }
 
 
