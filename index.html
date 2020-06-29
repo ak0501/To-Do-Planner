@@ -6,6 +6,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
@@ -16,11 +17,14 @@
   <!-- BootStrap script -->
   <script type="text/JavaScript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
 
+  <!-- Imported Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <!-- Imported Font -->
   <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&display=swap" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="Asset/style.css"/>
+  <link rel="stylesheet" href="Asset/style.css" />
 </head>
 
 <!-- ----------------------- UI & UX Ideas and Request ----------------------- -->
@@ -36,82 +40,69 @@
   </header>
   <!-- ----------------------- Jumbotron -----------------------  -->
   <div class="main row">
-    <div class="jumbotron col-6">
+    <div class="jumbotron col">
       <h1 class="display-4">Motivational Todo List</h1>
       <p class="lead">To add items to the list begin by tying them in the text box</p>
-      <p class="lead">Then when you are done hit the complete button</p>
-      <!-- Action Buttons  -->
-
-
+      <p class="lead">When you are done hit the complete button</p>
       <hr class="my-4">
       <!-- Points & Todo Count -->
-      <h5>Current Points: <span id="points">0</span></h5>
-      <h5>Todo Count: <span id="todo-count">0</span></h5>
+      <h5>Completed Todos: <span id="points">0</span></h5>
+      <h5>Current Todo Count: <span id="todo-count">0</span></h5>
       <hr class="my-4">
       <!-- ----------------------- Todo Entry Textbox ----------------------- -->
       <div class="todos">
         <form id="todo-form" method="POST">
           <label for="todo-text">Add a Todo:</label>
           <!-- Todo textbox with placeholder -->
-          <input type="text" placeholder="What needs to be done?" name="todo-text" id="todo-text"
+          <input type="text" placeholder="What needs to get done?" name="todo-text" id="todo-text"
             style="text-align: center">
         </form>
       </div>
       <br>
       <!-- Todos render here -->
       <div>
-        <ul id="todo-list"></ul>
+        <ul class="list-group list-group-flush" id="todo-list"></ul>
       </div>
-
     </div>
-    <div class="col-6">
-      <div>
-        <div class="card-body">
-          <img id="motivationImage" src="https://via.placeholder.com/350X150C/O https://placeholder.com/"
-            class="img-fluid" alt="Sample image">
-        </div>
-      </div>
-      <br>
-      <!-- Display Motivational Quote -->
+    <div class="jumbotron col">
+      <!-- Display Motivational Quote and Image -->
       <div class="row">
-        <div class="quotesCard card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Motivational Quote</h5>
-            <p id="quote" class="card-text">Click the button for some motivation!</p>
-            <button id="motivationButton" class="btn btn-primary btn-lg" href="#" role="button">Get Motivated</button>
-          </div>
-        </div>
-        <br>
         <!-- Display Timer -->
-        <div class="timerCard card" style="width: 18rem;">
+        <div class="timerCard card">
           <!-- Countdown Timer animation could go here -->
           <!-- <img src="..." class="card-img-top" alt="..."> -->
           <div class="card-body">
             <h5 class="card-title">Countdown Timer</h5>
             <h1 id="time"></h1>
             <p class="card-text">Any remaining time will be added to your score! Get it done!</p>
-            <button id="timmerButton" class="btn btn-primary btn-lg" href="#" role="button">Get Started</button>
+            <button id="timerButton" class="btn btn-primary btn-lg" role="button">Get Started</button>
           </div>
         </div>
-
+        <br>
+        <div class="quotesCard card">
+          <img id="motivationImage" class="img-fluid" alt="Sample image">
+          <div class="card-body">
+            <h5 class="card-title">Motivational Quote</h5>
+            <p id="quote" class="card-text">Click the button for some motivation! Quotes provided by Quote Garden</p>
+            <button id="motivationButton" class="btn btn-primary btn-lg" role="button">Get Motivated</button>
+          </div>
+        </div>
       </div>
-
     </div>
   </div>
 </body>
 
 <footer>
-
+  <div class="card-body">
+    This is some text within a card body.
+  </div>
 </footer>
 <!-------------------------- Scripts ----------------------- -->
 <!-- jQuery script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- Popper.js for positioning -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-  </script>
 
 <!-- Custom JavaScript -->
+<script type="text/JavaScript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
 
 <script src="https://apis.google.com/js/api.js"></script>
 
