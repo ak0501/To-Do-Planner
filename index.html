@@ -16,6 +16,8 @@
 
   <!-- BootStrap script -->
   <script type="text/JavaScript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
+  <!--  MomentJs script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.0/moment.min.js"></script>
 
   <!-- Imported Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -74,6 +76,7 @@
           <div class="card-body">
             <h5 class="card-title">Countdown Timer</h5>
             <h1 id="time"></h1>
+
             <p class="card-text">Any remaining time will be added to your score! Get it done!</p>
             <button id="timerButton" class="btn btn-primary btn-lg" role="button">Get Started</button>
           </div>
@@ -85,6 +88,10 @@
             <h5 class="card-title">Motivational Quote</h5>
             <p id="quote" class="card-text">Click the button for some motivation! Quotes provided by Quote Garden</p>
             <button id="motivationButton" class="btn btn-primary btn-lg" role="button">Get Motivated</button>
+
+            <p class="card-text" id ="newTimmer">Any remaining time will be added to your score! Get it done!</p>
+            <button onclick= "startTimer()" id="timmerButton" class="btn btn-primary btn-lg" href="#" role="button">Get Started</button>
+
           </div>
         </div>
       </div>
