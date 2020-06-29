@@ -108,7 +108,7 @@ todoList.addEventListener("click", function (event) {
     // display the todo to the user
     renderTodos();
   } else if (element.classList.contains("fa-hourglass-1") == true) {
-    console.log("Timer!");
+    startTimer();
   } else {
     var index = element.parentElement.getAttribute("data-index");
     todos.splice(index, 1);
@@ -195,18 +195,14 @@ var startTimer = function(){
     } else if (sec < 10 && sec.length != 2) sec = "0" + sec;
 
 
-   
-    $("#newTimmer").text(min + ":" + sec);
+
+    $("#time").text(min + ":" + sec);
     if (min == 0 && sec == 0)
       clearInterval(timer);
 
 
   }, 1000);
   }
-
-
-
-
 
 // ----------------------- Quote API Variables ----------------------- //
 
