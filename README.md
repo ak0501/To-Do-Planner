@@ -1,7 +1,7 @@
 # Project-Uno
  
 # Website Link
-https://ak0501.github.io/Project-Uno/
+https://ak0501.github.io/To-Do-Planner/
  
 # Contributers
  Liban Madar
