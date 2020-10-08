@@ -1,4 +1,4 @@
-# toDo
+# ToDo Planner
  
 # Website Link
 https://ak0501.github.io/To-Do-Planner/
